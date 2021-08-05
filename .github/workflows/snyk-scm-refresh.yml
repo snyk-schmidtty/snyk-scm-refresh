@@ -27,6 +27,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: snyk-scm-refresh
-      run: |
         ./snyk_scm_refresh.py --org=0e415b97-149f-46d2-8728-0f9fda933b27
+#    - name: snyk-scm-refresh
+#      run: |        
