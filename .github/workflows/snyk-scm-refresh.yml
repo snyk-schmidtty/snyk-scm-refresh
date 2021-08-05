@@ -20,13 +20,15 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
+
+    - name: Install dependencies
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         GITHUB_TOKEN: ${{secrets.GH_TOKEN }}
-    - name: Install dependencies
       run: |
         python3 -m pip install -r requirements.txt
         pwd
+        env
         ls -la
         python3 ./snyk_scm_refresh.py --org=0e415b97-149f-46d2-8728-0f9fda933b27
 #    - name: snyk-scm-refresh
