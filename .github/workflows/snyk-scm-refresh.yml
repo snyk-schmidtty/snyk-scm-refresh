@@ -27,7 +27,4 @@ jobs:
         GITHUB_TOKEN: ${{secrets.GH_TOKEN }}
       run: |
         python3 -m pip install -r requirements.txt
-        pwd
-        env
-        ls -la
         python3 ./snyk_scm_refresh.py --org=0e415b97-149f-46d2-8728-0f9fda933b27 --code=on --iac=on --container=on --sca=on     
