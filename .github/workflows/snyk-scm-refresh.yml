@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: snyk-scm-refresh
+name: 0e415b97-149f-46d2-8728-0f9fda933b27 Org Refresh
 
 on:
   push:
@@ -22,10 +22,13 @@ jobs:
         python-version: 3.9
 
     - name: Install dependencies
+      run: |
+        python3 -m pip install -r requirements.txt
+
+    - name: Org 28932cec-ddff-4555-b68b-f63fd746ee3b
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         GITHUB_TOKEN: ${{secrets.GH_TOKEN }}
       run: |
-        python3 -m pip install -r requirements.txt
         python3 ./snyk_scm_refresh.py --org=0e415b97-149f-46d2-8728-0f9fda933b27 --code=on --iac=on --container=on --sca=on
         python3 ./snyk_scm_refresh.py --org=fa673ae2-23e3-4b46-a624-da40f421832a --code=on --iac=on --container=on --sca=on
