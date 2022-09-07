@@ -30,4 +30,4 @@ jobs:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         GITHUB_TOKEN: ${{secrets.GH_TOKEN }}
       run: |
-        python3 ./snyk_scm_refresh.py --org=28932cec-ddff-4555-b68b-f63fd746ee3b --code=on --iac=on --container=on --sca=on --audit_large_repos --debug
+        python3 ./snyk_scm_refresh.py --org=28932cec-ddff-4555-b68b-f63fd746ee3b --code=on --iac=on --container=on --sca=on --audit-large-repos --debug
